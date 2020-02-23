@@ -11,3 +11,6 @@ const initialState = {
 };
 
 // Create a  context
+export const GlobalContext = createContext(initialState);
+
+// Provider Component
