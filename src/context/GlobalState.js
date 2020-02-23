@@ -2,13 +2,26 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 
 // Initial state
-const initialState = {
-  tasks: [
-    { id: 1, text: "Study" },
-    { id: 2, text: "Clean my room" },
-    { id: 3, text: "Read a book" }
-  ]
-};
+
+const localStorageTask = JSON.parse(localStorage.getItem("tasks"));
+let initialState = {};
+console.log(localStorageTask);
+
+if (localStorageTask !== null) {
+  initialState = { tasks: localStorageTask };
+} else {
+  initialState = {
+    tasks: []
+  };
+}
+
+// const initialState = {
+//   tasks: [
+//     { id: 1, text: "Study" },
+//     { id: 2, text: "Clean my room" },
+//     { id: 3, text: "Read a book" }
+//   ]
+// };
 
 // Create a  context
 export const GlobalContext = createContext(initialState);
