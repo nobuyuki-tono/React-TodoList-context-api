@@ -1,0 +1,17 @@
+.listItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listItem button {
+  width: 30px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s;
+}
+
+.listItem button:hover {
+  cursor: pointer;
+  background-color: rgb(253, 74, 74);
+}

@@ -10,7 +10,9 @@ function App() {
   return (
     <GlobalProvider>
       <Header />
-      <div className="container"></div>
+      <div className="container">
+        <List />
+      </div>
     </GlobalProvider>
   );
 }

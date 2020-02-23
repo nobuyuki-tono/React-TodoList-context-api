@@ -1,10 +1,12 @@
 import React from "react";
 
-const ListItem = () => {
+import "../styles/ListItem.css";
+
+const ListItem = ({ text }) => {
   return (
-    <div>
-      <h2>Heiy</h2>
-    </div>
+    <li className="listItem">
+      {text} <button>X</button>
+    </li>
   );
 };
 
