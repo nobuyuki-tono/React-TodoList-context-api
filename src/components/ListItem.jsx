@@ -4,12 +4,12 @@ import { GlobalContext } from "../context/GlobalState";
 
 import "../styles/ListItem.css";
 
-const ListItem = ({ text }) => {
-  const { tasks } = useContext(GlobalContext);
+const ListItem = ({ task }) => {
+  const { deleteTask } = useContext(GlobalContext);
 
   return (
     <li className="listItem">
-      {text} <button onClick={deleteItem}>X</button>
+      {task.text} <button onClick={() => deleteTask(task.id)}>X</button>
     </li>
   );
 };

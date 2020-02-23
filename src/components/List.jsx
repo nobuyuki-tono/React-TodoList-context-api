@@ -13,7 +13,7 @@ const List = () => {
       <h2>Tasks</h2>
       <ul className="tasks">
         {tasks.map(task => (
-          <ListItem key={task.id} text={task.text} />
+          <ListItem key={task.id} task={task} />
         ))}
       </ul>
     </div>

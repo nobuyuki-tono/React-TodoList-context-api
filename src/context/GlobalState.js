@@ -6,7 +6,7 @@ const initialState = {
   tasks: [
     { id: 1, text: "Study" },
     { id: 2, text: "Clean my room" },
-    { id: 1, text: "Read a book" }
+    { id: 3, text: "Read a book" }
   ]
 };
 
@@ -25,11 +25,19 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function addTask(task) {
+    dispatch({
+      type: "ADD_TASK",
+      payload: task
+    });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
         tasks: state.tasks,
-        deleteTask
+        deleteTask,
+        addTask
       }}
     >
       {children}
