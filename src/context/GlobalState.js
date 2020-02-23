@@ -18,12 +18,12 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   return (
-    <GlobalProvider
+    <GlobalContext.Provider
       value={{
         tasks: state.tasks
       }}
     >
       {children}
-    </GlobalProvider>
+    </GlobalContext.Provider>
   );
 };
